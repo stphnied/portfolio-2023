@@ -1,0 +1,252 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0d07;
+    color: white;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    overflow-y: hidden;
+}
+
+/* TEXTS -----------------------------------------------------------------------------*/
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    text-align: justify;
+    line-height: 0.9cm;
+}
+
+li {
+    list-style-type: none;
+}
+
+.hr-line:before {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid rgb(255, 255, 255);
+    width: 2rem;
+    margin: 0 1rem;
+    transform: translateY(-0.25rem);
+}
+
+
+/* HEADER -----------------------------------------------------------------------------*/
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin: 1rem 0 1rem 0;
+}
+
+/* NAVIGATION -----------------------------------------------------------------------------*/
+nav {
+    width: 75vw;
+    display: flex;
+    overflow: hidden;
+    /* background-color: rgba(128, 0, 128, 0.253); */
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+}
+
+.menu,
+.socials {
+    margin: auto 0;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    transform: translateX(2.05vw);
+}
+
+.menu ul li {
+    padding: 0 1rem;
+}
+
+.socials ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socials ul li {
+    padding: 0 0.5rem;
+}
+
+.socials i {
+    font-size: 1.15rem;
+}
+
+nav a {
+    position: relative;
+    opacity: 0.2;
+    text-decoration: none;
+}
+
+
+nav a:hover {
+    color: yellow;
+    opacity: 1;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: yellow;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    
+}
+
+nav a:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* SECTIONS ----------------------------------------------------------------------------- */
+
+.scroll-wrap {
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    /* background-color: pink; */
+}
+
+.scroll-wrap>* {
+    /* width: 250px; */
+    /* height: auto;
+    flex: 0 0 auto;
+    background-color: blue; */
+}
+
+section {
+    display: flex;
+    height: 100%;
+}
+
+section .column {
+    flex: 50%;
+    margin: 2rem;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+section .left-side {
+    /* background-color: rgb(201, 201, 151); */
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: left; */
+    /* align-items: center; */
+    vertical-align: center;
+    height: auto;
+}
+
+section .right-side div {
+    /* background-color: aquamarine; */
+
+    /* background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+
+
+/* SECTION 01: HOMEPAGE */
+section .title,
+.content {
+    margin-top: 9rem;
+}
+
+/* Background -----------------------------------------------------------------------------*/
+.bg-wrap {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gradient {
+    --size: 250px;
+    --speed: 50s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(#0eacf6, #fd60c0);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: -99999;
+}
+
+@media (min-width: 720px) {
+    .gradient {
+        --size: 500px;
+    }
+}
+
+/* This is just to transition when you change the viewport size. */
+* {
+    transition: all 0.25s ease-out;
+}
