@@ -138,7 +138,6 @@ nav a::before {
     background-color: yellow;
     transform: scaleX(0);
     transition: transform 0.3s ease;
-    
 }
 
 nav a:hover::before {
@@ -157,6 +156,13 @@ nav a:hover::before {
 
     /* background-color: pink; */
 }
+
+/* On smaller screen, make the width bigger  */
+/* @media screen and (max-width: 1920px) {
+    .scroll-wrap {
+        width: 85vw;
+    }
+} */
 
 .scroll-wrap>* {
     /* width: 250px; */
