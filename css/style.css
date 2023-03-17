@@ -122,7 +122,7 @@ a {
     text-decoration: none;
 }
 
-nav a { 
+nav a {
     opacity: 0.2;
 }
 
@@ -233,15 +233,45 @@ section .title,
 }
 
 /* RIGHT SIDE */
-
 .work-section .right-side {
+
+  /* Code from PQINA ------*/
     overflow-y: scroll;
+    /* scroll bar width, for use in mask calculations */
+   --scrollbar-width: 8px;
+
+   /* mask fade distance, for use in mask calculations */
+   --mask-height: 32px;
+
+   /* Our height limit */
+   height: 80vh;
+
+   /* Need to make sure container has bottom space,
+ otherwise content at the bottom is always faded out */
+   padding-bottom: var(--mask-height);
+
+   /* Keep some space between content and scrollbar */
+   padding-right: 20px;
+
+   /* The CSS mask */
+
+   /* The content mask is a linear gradient from top to bottom */
+   --mask-image-content: linear-gradient(
+       to bottom,
+       transparent,
+       black var(--mask-height),
+       black calc(100% - var(--mask-height)),
+       transparent
+   );
+ /* End of code from Pqina ------ */
+
+   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
 .work-section .right-side::-webkit-scrollbar {
     display: none;
 }
-
 
 
 .gallery {
@@ -255,13 +285,14 @@ section .title,
     z-index: -10;
 }
 
-.gallery div{
-    /* border: 2px solid #0eacf6; */
-}
 
 .gallery div img {
     width: 100%;
-    opacity: 0.25;
+    opacity: 0.5;
+}
+
+.gallery div img:hover {
+  opacity: 1;
 }
 
 .title-work {
@@ -274,11 +305,6 @@ section .title,
 .title-work h1 {
     line-height: 90%;
 }
-
-.gallery {
-    mask-image: linear-gradient(180deg, #000 60%, transparent);
-}
-
 
 /* Background -----------------------------------------------------------------------------*/
 .bg-wrap {
