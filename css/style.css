@@ -72,14 +72,16 @@ header img {
 
 /* NAVIGATION -----------------------------------------------------------------------------*/
 nav {
-    width: 75vw;
+    width: 100vw;
     display: flex;
     overflow: hidden;
     /* background-color: rgba(128, 0, 128, 0.253); */
     position: fixed;
     bottom: 0;
     padding: 1rem;
+    z-index: 10000000;
 }
+
 
 .menu,
 .socials {
@@ -115,19 +117,21 @@ nav {
     font-size: 1.15rem;
 }
 
-nav a {
+a {
     position: relative;
-    opacity: 0.2;
     text-decoration: none;
 }
 
+nav a { 
+    opacity: 0.2;
+}
 
-nav a:hover {
-    color: yellow;
+a:hover {
+    color: #18d2d2;
     opacity: 1;
 }
 
-nav a::before {
+a::before {
     content: "";
     position: absolute;
     display: block;
@@ -135,12 +139,12 @@ nav a::before {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: yellow;
+    background-color: #18d2d2;
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
 
-nav a:hover::before {
+a:hover::before {
     transform: scaleX(1);
 }
 
@@ -153,9 +157,10 @@ nav a:hover::before {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-
+    overflow-y: hidden;
     /* background-color: pink; */
 }
+
 
 /* On smaller screen, make the width bigger  */
 /* @media screen and (max-width: 1920px) {
@@ -184,34 +189,96 @@ section .column {
 }
 
 section .left-side {
-    /* background-color: rgb(201, 201, 151); */
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    text-align: left; */
-    /* align-items: center; */
     vertical-align: center;
     height: auto;
 }
 
 section .right-side div {
     /* background-color: aquamarine; */
-
-    /* background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
-
-
-/* SECTION 01: HOMEPAGE */
 section .title,
 .content {
     margin-top: 9rem;
 }
+
+/* SECTION 01: HOMEPAGE -----------------------------------------------------------------------------*/
+
+/* SECTION 02: ABOUGE PAGE -----------------------------------------------------------------------------*/
+.about-section {
+    display: none;
+}
+
+
+/* SECTION 03: WORK PAGE -----------------------------------------------------------------------------*/
+
+.work-section {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+}
+
+/* left side */
+.work-section ul {
+    margin: 0.25rem 0 0 4rem;
+}
+
+.work-section ul li {
+    line-height: 1.75rem;
+}
+
+.work-section ul li a {
+    font-family: "Raleway";
+    font-size: 0.9rem;
+}
+
+/* RIGHT SIDE */
+
+.work-section .right-side {
+    overflow-y: scroll;
+}
+
+.work-section .right-side::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.gallery {
+    border-left: 2px solid rgba(255, 255, 255, 0.473);
+    border-right: 2px solid rgba(255, 255, 255, 0.473);
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: 0 2.5px;
+    z-index: -10;
+}
+
+.gallery div{
+    /* border: 2px solid #0eacf6; */
+}
+
+.gallery div img {
+    width: 100%;
+    opacity: 0.25;
+}
+
+.title-work {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 0.5rem;
+}
+
+.title-work h1 {
+    line-height: 90%;
+}
+
+.gallery {
+    mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
+
 
 /* Background -----------------------------------------------------------------------------*/
 .bg-wrap {
@@ -221,6 +288,7 @@ section .title,
     place-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: -99999;
 }
 
 @keyframes rotate {
