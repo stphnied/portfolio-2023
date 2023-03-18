@@ -213,7 +213,7 @@ section .title,
 /* SECTION 03: WORK PAGE -----------------------------------------------------------------------------*/
 
 .work-section {
-    /* display: none; */
+    display: none;
     width: 100%;
     height: 100%;
 }
@@ -305,6 +305,17 @@ section .title,
 .title-work h1 {
     line-height: 90%;
 }
+
+
+/* SECTION 04: WORK FOCUSED PAGE -----------------------------------------------------------------------------*/
+
+.workF-section p {
+    margin: 0 1rem;
+}
+
+
+
+
 
 /* Background -----------------------------------------------------------------------------*/
 .bg-wrap {
