@@ -15,17 +15,19 @@
         rel="stylesheet">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/blobz.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 </head>
 
 <body>
-    <header>
-        <img src="assets/img/SD_logo.png" alt="">
-    </header>
-
     <!-- navigation -->
     <nav>
+        <div class="logo">
+            <img src="assets/img/SD_logo.png" alt="" srcset="">
+        </div>
         <div class="menu">
             <ul>
                 <li><a href="">About</a></li>
@@ -45,11 +47,29 @@
     </nav>
     <!-- sections -->
     <div class="scroll-wrap">
+        <!-- HOMEPAGE -->
+        <section class="home-section">
+            <video autoplay muted loop id="myVideo">
+                <source src="assets/vid/Dang_Promo.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            <!-- <div class="column left-side">
+                <div class="title">
+                    <h1>Stephanie Dang.</h1>
+                    <h2 class="hr-line">Graphic Designer</h2>
+                </div>
+            </div> -->
+            <!-- <div class="column right-side">
+                <div class="content">
+                    <iframe width="720" height="480" src="https://www.youtube.com/embed/G2YNzOR3FAg?controls=0&showinfo=0&frameborder=0&autoplay=1"></iframe>
+                </div>
+            </div> -->
+        </section>
         <!-- ABOUT -->
         <section class="about-section">
             <div class="column left-side">
                 <div class="title">
-                    <h1>About Steph.</h1>
+                    <h1>About Me.</h1>
                     <h2 class="hr-line">
                         <a href="">Download CV</a>
                     </h2>
@@ -61,7 +81,7 @@
                     <p>
                         Stéphanie Dang is a graphic designer based in Montréal, Canada. She completed a BFA
                         in Computation Arts at Concordia University and a DEC in Multimedia Integration at
-                        Collège de Maisonneuve. She specializes in poster creation and motion design, which
+                        Collège de Maisonneuve. <br><br>She specializes in poster creation and motion design, which
                         has earned her 2nd place at the Exposition d’Affiches et de Concept de Jeux Vidéos
                         édition 2017, organized by Collège de Maisonneuve. These expertises allowed her to
                         intern at several organizations such as Simbioz, GFN Productions, and BetterSleep
@@ -127,11 +147,7 @@
             </div>
             <div class="column right-side">
                 <div class="content slideshow-container">
-                    <div class="dot-indicator">
-                        <span class="dot" onclick="currentSlide(1)"></span> 
-                        <span class="dot" onclick="currentSlide(2)"></span> 
-                        <span class="dot" onclick="currentSlide(3)"></span> 
-                      </div>
+
                     <!-- Add content... -->
                     <div class="slide fade">
                         <img src="assets/img/11.png" alt="">
@@ -139,7 +155,30 @@
                     <div class="slide fade">
                         <img src="assets/img/poster_01.png" alt="">
                     </div>
-
+                    <div class="dot-indicator">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT -->
+        <section class="contact-section">
+            <div class="column left-side">
+                <div class="title">
+                    <h1>Contact.</h1>
+                    <h2 class="hr-line">Let's work together</h2>
+                    <ul>
+                        <li><a href="mailto:stphnie.dang@gmail.com" target="_top">stphnie.dang@gmail.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/dangstephanie/"
+                                target=”_blank”>linkedin.com/in/dangstephanie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column right-side">
+                <div class="content">
+                    <img src="assets/img/Steph.jpg" alt="">
                 </div>
             </div>
         </section>

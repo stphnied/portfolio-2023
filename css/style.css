@@ -15,9 +15,13 @@ body {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     overflow-y: hidden;
+    /* bg */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.096) 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
 }
 
-/* TEXTS -----------------------------------------------------------------------------*/
+/* TEXTS ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 a,
 a:visited,
 a:hover,
@@ -28,12 +32,12 @@ a:active {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4.75rem;
     font-family: 'Poppins', sans-serif;
 }
 
 h2 {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
 }
@@ -41,6 +45,7 @@ h2 {
 p {
     text-align: justify;
     line-height: 0.9cm;
+    letter-spacing: 0.05rem;
 }
 
 li {
@@ -50,29 +55,15 @@ li {
 .hr-line:before {
     display: inline-block;
     content: "";
-    border-top: .3rem solid rgb(255, 255, 255);
+    border-top: .3rem solid #fd60c0;
     width: 2rem;
     margin: 0 1rem;
     transform: translateY(-0.25rem);
 }
 
-
-/* HEADER -----------------------------------------------------------------------------*/
-header {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
-
-header img {
-    width: 50px;
-    height: auto;
-    margin: 1rem 0 1rem 0;
-}
-
-/* NAVIGATION -----------------------------------------------------------------------------*/
+/* NAVIGATION ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 nav {
-    width: 70vw;
+    width: 85vw;
     display: flex;
     overflow: hidden;
     /* background-color: rgba(128, 0, 128, 0.253); */
@@ -82,10 +73,18 @@ nav {
     z-index: 10000000;
 }
 
-
 .menu,
-.socials {
+.socials,
+.logo {
     margin: auto 0;
+}
+
+
+.logo img {
+    width: 40px;
+    height: auto;
+    margin: 1rem 0 1rem 0;
+    opacity: 0.6;
 }
 
 .menu {
@@ -123,7 +122,7 @@ a {
 }
 
 nav a {
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 a:hover {
@@ -149,25 +148,16 @@ a:hover::before {
 }
 
 
-/* SECTIONS ----------------------------------------------------------------------------- */
+/* SECTIONS ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .scroll-wrap {
-    width: 75vw;
+    width: 85vw;
     height: 100vh;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    /* background-color: pink; */
 }
-
-
-/* On smaller screen, make the width bigger  */
-/* @media screen and (max-width: 1920px) {
-    .scroll-wrap {
-        width: 85vw;
-    }
-} */
 
 .scroll-wrap>* {
     /* width: 250px; */
@@ -182,91 +172,158 @@ section {
 }
 
 section .column {
-    flex: 50%;
+    display: flex;
     margin: 2rem;
     /* align-items: center; */
     justify-content: center;
 }
 
 section .left-side {
+    flex: 40%;
+    justify-content: center;
     vertical-align: center;
     height: auto;
 }
 
-section .right-side div {
-    /* background-color: aquamarine; */
+section .right-side {
+    flex: 60%;
 }
 
 section .title,
 .content {
-    margin-top: 9rem;
+    margin-top: 10rem;
 }
 
-/* SECTION 01: HOMEPAGE -----------------------------------------------------------------------------*/
-
-/* SECTION 02: ABOUGE PAGE -----------------------------------------------------------------------------*/
-.about-section {
+.home-section,
+.about-section,
+.contact-section,
+/* .work-section, */
+.workF-section
+ {
     display: none;
 }
 
 
-/* SECTION 03: WORK PAGE -----------------------------------------------------------------------------*/
+.about-section,
+.contact-section,
+.work-section,
+.workF-section {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.027);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
 
-.work-section {
-    /* display: none; */
+
+
+/* SECTION 01: HOMEPAGE ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.home-section {
     width: 100%;
     height: 100%;
 }
 
+.home-section .left-side {
+    display: flex;
+    flex: 75%
+}
+
+.home-section .right-side .content {
+    display: flex;
+    /* justify-content: center; */
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: -77px;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.5;
+}
+
+
+/* SECTION 02: ABOUT PAGE ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.about-section {
+    width: 100%;
+    height: 100%;
+}
+
+
+.about-section .content p {
+    padding-right: 5rem;
+    max-width: 40vw;
+}
+
+.about-section .right-side {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/* SECTION 03: WORK PAGE ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.work-section {
+    width: 100%;
+    height: 100%;
+
+}
+
 /* left side */
-.work-section ul {
+.work-section ul,
+.contact-section ul {
     margin: 0.25rem 0 0 4rem;
 }
 
-.work-section ul li {
+.work-section ul li,
+.contact-section ul li {
     line-height: 1.75rem;
 }
 
-.work-section ul li a {
+.work-section ul li a,
+.contact-section ul li a {
     font-family: "Raleway";
     font-size: 0.9rem;
 }
 
 /* RIGHT SIDE */
 .work-section .right-side {
-
-  /* Code from PQINA ------*/
+    /* Code from PQINA ------*/
     overflow-y: scroll;
     /* scroll bar width, for use in mask calculations */
-   --scrollbar-width: 8px;
+    --scrollbar-width: 8px;
 
-   /* mask fade distance, for use in mask calculations */
-   --mask-height: 32px;
+    /* mask fade distance, for use in mask calculations */
+    --mask-height: 32px;
 
-   /* Our height limit */
-   height: 80vh;
+    /* Our height limit */
+    height: 80vh;
 
-   /* Need to make sure container has bottom space,
+    /* Need to make sure container has bottom space,
  otherwise content at the bottom is always faded out */
-   padding-bottom: var(--mask-height);
+    padding-bottom: var(--mask-height);
 
-   /* Keep some space between content and scrollbar */
-   padding-right: 20px;
+    /* Keep some space between content and scrollbar */
+    padding-right: 20px;
 
-   /* The CSS mask */
+    /* The CSS mask */
 
-   /* The content mask is a linear gradient from top to bottom */
-   --mask-image-content: linear-gradient(
-       to bottom,
-       transparent,
-       black var(--mask-height),
-       black calc(100% - var(--mask-height)),
-       transparent
-   );
- /* End of code from Pqina ------ */
+    /* The content mask is a linear gradient from top to bottom */
+    --mask-image-content: linear-gradient(to bottom,
+            transparent,
+            black var(--mask-height),
+            black calc(100% - var(--mask-height)),
+            transparent);
+    /* End of code from Pqina ------ */
 
-   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
 .work-section .right-side::-webkit-scrollbar {
@@ -277,22 +334,21 @@ section .title,
 .gallery {
     border-left: 2px solid rgba(255, 255, 255, 0.473);
     border-right: 2px solid rgba(255, 255, 255, 0.473);
-    height: auto;
+    height: fit-content;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 0 2.5px;
     z-index: -10;
 }
 
-
 .gallery div img {
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .gallery div img:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .title-work {
@@ -307,10 +363,9 @@ section .title,
 }
 
 
-/* SECTION 04: WORK FOCUSED PAGE -----------------------------------------------------------------------------*/
+/* SECTION 04: WORK FOCUSED PAGE ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .workF-section {
-    display: none;
     width: 100%;
     height: 100%;
 }
@@ -320,6 +375,7 @@ section .title,
 }
 
 .slideshow-container {
+    margin-top: -1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -330,44 +386,67 @@ section .title,
     justify-content: center;
 }
 
-.workF-section .slide img  {
-    max-width: 70%;
-    max-height: 500px;
+.workF-section .slide img {
+    max-height: 750px;
 }
 
 .dot-indicator {
     display: flex;
     justify-content: center;
 }
+
 .dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 0.5rem 0.25rem;
-  background-color: #646464;
-  opacity: 0.6;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 1rem 0.25rem;
+    background-color: #646464;
+    opacity: 0.6;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #fd60c0;
-  }
+    opacity: 1;
+}
 
 /* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
+}
 
-/* Background -----------------------------------------------------------------------------*/
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* SECTION 05: CONTACT ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.contact-section {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-section .right-side {
+    display: flex;
+}
+
+.contact-section img {
+    /* max-width: 70%; */
+    max-height: 450px;
+}
+
+
+/* Background ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .bg-wrap {
     position: absolute;
     inset: 0;
