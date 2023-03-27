@@ -1,0 +1,41 @@
+@keyframes slide-up {
+    0% {
+        transform: translateY(50vw);
+      }
+    
+      100% {
+        transform: translateY(0);
+      }
+}
+
+
+@keyframes slide-down {
+    0% {
+        transform: translate3d(0, 0, 0);
+      }
+    
+      100% {
+        transform: translate3d(0, 100vh, 0);
+      }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 720px) {
+    .gradient {
+        --size: 500px;
+    }
+}
+
+/* This is just to transition when you change the viewport size. */
+* {
+    transition: all 0.25s ease-out;
+}

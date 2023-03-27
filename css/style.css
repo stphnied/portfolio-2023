@@ -204,21 +204,6 @@ section .title,
 }
 
 
-.about-section,
-.contact-section,
-.work-section,
-.workF-section {
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.027);
-    /* border-radius: 16px; */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.5px);
-    -webkit-backdrop-filter: blur(6.5px);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
 
 /* SECTION 01: HOMEPAGE ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -254,16 +239,28 @@ section .title,
     height: 100%;
 }
 
-
-.about-section .content p {
-    padding-right: 5rem;
+.about-section .content p{
+    border-top: 2px solid rgba(255, 255, 255, 0.473);
+    margin-right: 5rem;
     max-width: 40vw;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.473);
 }
 
 .about-section .right-side {
     display: flex;
     justify-content: center;
+}
 
+.about-section .title {
+    animation: slide-up 0.25s ease-out; 
+}
+
+.about-section .content{
+    animation: slide-up 0.5s ease-out;
+}
+
+.tk-blob {
+    animation: slide-up 1s ease-out;
 }
 
 
@@ -328,6 +325,11 @@ section .title,
 
 .work-section .right-side::-webkit-scrollbar {
     display: none;
+}
+
+
+.left-side {
+    position: relative;
 }
 
 
@@ -446,49 +448,5 @@ section .title,
 }
 
 
-/* Background ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.bg-wrap {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    place-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: -99999;
-}
 
 
-
-.gradient {
-    --size: 250px;
-    --speed: 50s;
-    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-    width: var(--size);
-    height: var(--size);
-    filter: blur(calc(var(--size) / 5));
-    background-image: linear-gradient(#0eacf6, #fd60c0);
-    animation: rotate var(--speed) var(--easing) alternate infinite;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    z-index: -99999;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@media (min-width: 720px) {
-    .gradient {
-        --size: 500px;
-    }
-}
-
-/* This is just to transition when you change the viewport size. */
-* {
-    transition: all 0.25s ease-out;
-}
