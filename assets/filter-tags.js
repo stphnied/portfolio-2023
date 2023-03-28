@@ -18,7 +18,6 @@
     }
   });
 
-
 // All button
   $('<li/>').appendTo($buttons).append(
     $('<a/>', {
@@ -31,12 +30,11 @@
           .siblings()
           .removeClass('active');
         $imgs.show();
-        console.log(this);
       }
     })
 );
   
-// All the other sections
+// Selected filters!!
   $.each(tagged, function (tagName) {
     $('<li/>').appendTo($buttons).append(
       $('<a/>', {
@@ -47,15 +45,19 @@
             .addClass('active')
             .siblings()
             .removeClass('active')
-            console.log(this);
           $imgs
             .hide()
             .filter(tagged[tagName])
             .show();
-          
         }
       })
     );
   });
 
 }());
+
+// let $num =0;
+// $('.work-section img').each(function() {
+//   $(this).attr('src', 'assets/img/poster_0'+$num.toString()+'.png');
+//   $num++
+//  });

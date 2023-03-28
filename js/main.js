@@ -17,8 +17,6 @@ $(".menu ul li a").click(function () {
         $(".gradient").css("display", "flex");
         $(".gradient").addClass("animate-bg");
     }
-
-
 });
 
 
@@ -30,12 +28,6 @@ $(".logo img").click(function () {
     $("#myVideo").get(0).load();
     $('#myVideo').get(0).play();
 })
-
-// Video play
-
-
-// Filtering Gallery
-
 
 // Work Focused: Slideshow
 let slideIndex = 1;
