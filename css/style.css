@@ -71,7 +71,7 @@ nav {
     position: fixed;
     bottom: 0;
     padding: 1rem;
-    z-index: 10000000;
+    z-index: 100;
     animation: slide-up-menu 2s ease-out;
 }
 
@@ -204,11 +204,13 @@ section .title,
     margin-top: 10rem;
 }
 
-.home-section,
+/* .home-section, */
 .about-section,
-/* .contact-section, */
-.work-section,
-.workF-section {
+.contact-section,
+.work-section
+,
+.workF-section
+ {
     display: none;
 }
 
@@ -236,7 +238,7 @@ section .title,
     bottom: -77px;
     min-width: 100%;
     min-height: 100%;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 
@@ -445,6 +447,7 @@ section .title,
 .dot-indicator {
     display: flex;
     justify-content: center;
+    z-index: 101;
 }
 
 .dot {
@@ -452,7 +455,8 @@ section .title,
     height: 15px;
     width: 15px;
     margin: 1rem 0.25rem;
-    background-color: #646464;
+    /* background-color: #646464; */
+    border: 2px solid white;
     opacity: 0.6;
     border-radius: 50%;
     display: inline-block;
@@ -461,7 +465,8 @@ section .title,
 
 .workF-section .active,
 .workF-section .dot:hover {
-    background-color: #fd60c0;
+    background-color: #18d2d2;
+    border: none;
     opacity: 1;
 }
 
