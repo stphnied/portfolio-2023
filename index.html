@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephanie Dang Portfolio 2023</title>
+    <title>SD - Portfolio</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/SD_logo.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +33,7 @@
     <nav>
         <div class="logo">
             <img src="assets/img/SD_logo.png " data-target=".home-section">
+            <p>Stéphanie Dang</p>
         </div>
         <div class="menu">
             <ul>
@@ -40,9 +45,9 @@
 
         <div class="socials">
             <ul>
-                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-square-github"></i></a></i></li>
+                <li><a><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/dangstephanie/" target=”_blank><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/stphnied" target=”_blank><i class="fa-brands fa-square-github"></i></a></i></li>
             </ul>
         </div>
 
@@ -55,17 +60,6 @@
                 <source src="assets/vid/Dang_Promo.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <!-- <div class="column left-side">
-                <div class="title">
-                    <h1>Stephanie Dang.</h1>
-                    <h2 class="hr-line">Graphic Designer</h2>
-                </div>
-            </div> -->
-            <!-- <div class="column right-side">
-                <div class="content">
-                    <iframe width="720" height="480" src="https://www.youtube.com/embed/G2YNzOR3FAg?controls=0&showinfo=0&frameborder=0&autoplay=1"></iframe>
-                </div>
-            </div> -->
         </section>
         <!-- ABOUT -->
         <section class="about-section s-h">
@@ -94,7 +88,8 @@
                 <div class="content">
                     <p>
                         <br>
-                        Stéphanie Dang is a <b>graphic designer</b> based in Montréal, Canada. She completed a BFA
+                        <span>Stéphanie Dang</span> is a <b>graphic designer</b> based in Montréal, Canada. She
+                        completed a BFA
                         in Computation Arts at Concordia University and a DEC in Multimedia Integration at
                         Collège de Maisonneuve. <br><br>She specializes in <b>poster creation and motion design</b>,
                         which
@@ -104,9 +99,7 @@
                         where she created wireframes, printed and digital advertising creatives including
                         posters, and videos. <br><br>
                     </p>
-                    <a href="">See work <i class="fa-solid fa-arrow-right"></i></a>
-                    <!-- <button type="button" name="button">See Work</button> -->
-
+                    <div class="about-wLink"><a href="">See work <i class="fa-solid fa-arrow-right"></i></a></div>
                 </div>
             </div>
         </section>
@@ -138,34 +131,65 @@
 
             </div>
             <div class="column right-side">
-                <div class="content gallery">
-                    <!-- 1 -->
-                    <div class="image-work" data-tags="poster">
-                        <div class="title-work">
-                            <h2 class="work-title">Titlework</h2>
+                <div class="work-container">
+                    <div class="content gallery">
+                        <!-- MOST RECENT ------------------------------------------->
+                        <!-- NEWEST -->
+                        <div class="image-work" data-tags="Motion,Poster">
+                            <div class="title-work">
+                                <h2 class="work-title">NEWEST</h2>
+                            </div>
+                            <img src="assets/img/motion_01.png">
                         </div>
-                        <img src="assets/img/poster_01.png" alt="">
-                    </div>
-                    <!-- 2 -->
-                    <div class="image-work" data-tags="poster">
-                        <div class="title-work">
-                            <h2 class="work-title">Titlework</h2>
+                        <!-- Music Theme Posters -->
+                        <div class="image-work" data-tags="Poster">
+                            <div class="title-work">
+                                <h2 class="work-title">Music Theme Posters</h2>
+                            </div>
+                            <img src="assets/img/poster_01.png" alt="">
                         </div>
-                        <img src="assets/img/poster_02.png" alt="">
-                    </div>
-                    <!-- 3 -->
-                    <div class="image-work" data-tags="poster">
-                        <div class="title-work">
-                            <h2 class="work-title">Titlework</h2>
+                        <!-- Environmental Poster -->
+                        <div class="image-work" data-tags="Poster">
+                            <div class="title-work">
+                                <h2 class="work-title">Podcast Poster</h2>
+                            </div>
+                            <img src="assets/img/poster_02.png" alt="">
                         </div>
-                        <img src="assets/img/poster_03.png" alt="">
-                    </div>
-                    <!-- 4 -->
-                    <div class="image-work" data-tags="motion">
-                        <div class="title-work">
-                            <h2 class="work-title">Titlework</h2>
+                        <!-- BetterSleep -->
+                        <div class="image-work" data-tags="Poster,Motion">
+                            <div class="title-work">
+                                <h2 class="work-title">BetterSleep</h2>
+                            </div>
+                            <img src="assets/img/motion_01.png">
                         </div>
-                        <img src="assets/img/motion_01.png">
+                        <!-- BetterSleep TikTok-->
+                        <div class="image-work" data-tags="Motion">
+                            <div class="title-work">
+                                <h2 class="work-title">TikTok</h2>
+                            </div>
+                            <img src="assets/img/motion_01.png">
+                        </div>
+                        <!-- Chez Chili -->
+                        <div class="image-work" data-tags="Poster,Other">
+                            <div class="title-work">
+                                <h2 class="work-title">Chez Chili</h2>
+                            </div>
+                            <img src="assets/img/motion_01.png">
+                        </div>
+                        <!-- GFN Productions -->
+                        <div class="image-work" data-tags="Poster">
+                            <div class="title-work">
+                                <h2 class="work-title">GFN Productions</h2>
+                            </div>
+                            <img src="assets/img/poster_03.png" alt="">
+                        </div>
+                        <!-- Gachapyon Game -->
+                        <div class="image-work" data-tags="Other">
+                            <div class="title-work">
+                                <h2 class="work-title">Gachapyon</h2>
+                            </div>
+                            <img src="assets/img/motion_01.png">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -207,7 +231,6 @@
                     <h1>Contact.</h1>
                     <h2 class="hr-line">Find me:</h2>
                     <ul>
-                        <li><a href="mailto:stphnie.dang@gmail.com" target="_top">stphnie.dang@gmail.com</a></li>
                         <li><a href="https://www.linkedin.com/in/dangstephanie/"
                                 target=”_blank”>linkedin.com/in/dangstephanie</a></li>
                     </ul>
@@ -216,12 +239,12 @@
             <div class="column right-side">
                 <div class="content">
                     <h2>Let's work together!</h2>
-                    <form>      
-                        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-                        <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                        <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
-                        <input type="submit" value="Send"/>
-                      </form>
+                    <form method="post" action="php/contact.php">
+                        <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" required/>
+                        <input name="email" type="email" class="feedback-input" placeholder="Email" id="email" required/>
+                        <textarea name="message" class="feedback-input" placeholder="Message" id="message" required></textarea>
+                        <input type="submit" value="Send" />
+                    </form>
                 </div>
             </div>
         </section>

@@ -20,6 +20,17 @@ $(".menu ul li a").click(function () {
 });
 
 
+// COPY TO CLIPBOARD
+let emailCopy = document.getElementsByClassName("fa-envelope");
+emailCopy[0].addEventListener("click",copyClipboard)
+
+function copyClipboard() {
+    // Get the text field
+    var copyText = "stphnie.dang@gmail.com"
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText);
+}
+
 // homepage btn Refresh vid
 $(".logo img").click(function () {
     $(".s-h").css("display", "none");
@@ -60,3 +71,11 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].className += " active";
 }
+
+
+// Contact form
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("email","req","Please provide your email");
+frmvalidator.addValidation("email","email",
+  "Please enter a valid email address");
