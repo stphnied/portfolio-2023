@@ -2,8 +2,8 @@
 if(isset($_POST['email'])) {
  
     // Change these to your email address and subject line
-    $email_to = "youremail@example.com";
-    $email_subject = "New Message from Website Contact Form";
+    $email_to = "metoko9633@dogemn.com";
+    $email_subject = "New Message from personal website!";
  
     function died($error) {
         // Error handling
@@ -61,11 +61,12 @@ $headers = 'From: '.$email_from."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  
 ?>
- 
-<!-- Thank you message to show after form submission -->
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
+
 <?php
+// Redirect the user to the same page
+header("Location: https://hybrid.concordia.ca/st_dang/portfolio-2023/#contact");
+exit();
+
 }
+
 ?> 
