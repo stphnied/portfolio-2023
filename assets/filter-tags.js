@@ -1,9 +1,11 @@
 (function () {
 
-  var $imgs = $('.image-work');
-  var $buttons = $('#buttons');
-  var tagged = {};
+  // var
+  var $imgs = $('.image-work'); //img div
+  var $buttons = $('#buttons'); //filter links
+  var tagged = {}; //get tags
 
+  // Get images
   $imgs.each(function () {
     var img = this;
     var tags = $(this).data('tags');
@@ -18,7 +20,8 @@
     }
   });
 
-// All button
+
+// ALL link
   $('<li/>').appendTo($buttons).append(
     $('<a/>', {
       text: ' All',
@@ -29,12 +32,12 @@
           .addClass('active')
           .siblings()
           .removeClass('active');
-        $imgs.show();
+        $imgs.fadeIn(200);
       }
     })
 );
   
-// Selected filters!!
+// Filters link
   $.each(tagged, function (tagName) {
     $('<li/>').appendTo($buttons).append(
       $('<a/>', {
@@ -48,7 +51,7 @@
           $imgs
             .hide()
             .filter(tagged[tagName])
-            .show();
+            .fadeIn("slow");
         }
       })
     );

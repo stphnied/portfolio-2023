@@ -107,14 +107,10 @@ nav {
     transition: 1s all;
 }
 
-.logo:hover p {
-    opacity: 1;
-}
 
 .logo p:hover {
     cursor: default;
 }
-
 
 .menu {
     flex: 1;
@@ -125,7 +121,7 @@ nav {
 .menu ul {
     display: flex;
     flex-direction: row;
-    transform: translateX(2.05vw);
+    /* transform: translateX(2.05vw); */
 }
 
 .menu ul li {
@@ -174,10 +170,21 @@ a::before {
     transition: transform 0.3s ease;
 }
 
-a:hover::before {
+a:hover::before,
+a:focus::before {
     transform: scaleX(1);
 }
 
+.logo a::before {
+    transform: scaleX(0);
+}
+
+.logo a::before,
+.logo a:hover::before,
+.work-section #buttons li a:before {
+    transform: scaleX(0);
+    background-color: none;
+}
 
 /* Contact copy */
 .fa-envelope::after {
@@ -191,7 +198,7 @@ a:hover::before {
     opacity: 0;
 }
 
-.fa-envelope:active:after  {
+.fa-envelope:active:after {
     opacity: 1;
 }
 
@@ -241,13 +248,13 @@ section .title,
     /* margin-top: 10rem; */
 }
 
-.home-section,
+/* .home-section, */
 .about-section,
-/* .contact-section, */
-.work-section,
-
+.contact-section,
+.work-section
+,
 .workF-section
- {
+    {
     display: none;
 }
 
@@ -445,7 +452,7 @@ span {
 
 .image-work {
     position: relative;
-    
+
 }
 
 .title-work {
@@ -492,6 +499,21 @@ span {
 .workF-section {
     width: 100%;
     height: 100%;
+}
+
+
+.workF-section .left-side {
+    flex-direction: column;
+}
+
+.workF-section .back-Btn {
+    position: absolute;
+    top: 10%;
+    align-self: baseline;
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin-left: -2.5rem;
+
 }
 
 .workF-section p {

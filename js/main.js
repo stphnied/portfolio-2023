@@ -12,8 +12,7 @@ $(".menu ul li a").click(function () {
     // if its home-section
     else if ($(this).data("target") == ".home-section") {
         $(".gradient").removeClass("animate-bg");
-    }
-    else {
+    } else {
         $(".gradient").css("display", "flex");
         $(".gradient").addClass("animate-bg");
     }
@@ -22,12 +21,12 @@ $(".menu ul li a").click(function () {
 
 // COPY TO CLIPBOARD
 let emailCopy = document.getElementsByClassName("fa-envelope");
-emailCopy[0].addEventListener("click",copyClipboard)
+emailCopy[0].addEventListener("click", copyClipboard)
 
 function copyClipboard() {
     // Get the text field
     var copyText = "stphnie.dang@gmail.com"
-     // Copy the text inside the text field
+    // Copy the text inside the text field
     navigator.clipboard.writeText(copyText);
 }
 
@@ -39,6 +38,16 @@ $(".logo img").click(function () {
     $("#myVideo").get(0).load();
     $('#myVideo').get(0).play();
 })
+
+
+$(".logo img").hover(
+    function () {
+        $(".logo p").css("opacity", "1")
+    },
+    function () {
+        $(".logo p").css("opacity", "0")
+    }
+)
 
 // Work Focused: Slideshow
 let slideIndex = 1;
@@ -74,15 +83,15 @@ function showSlides(n) {
 
 
 // Contact form
-var frmvalidator  = new Validator(".contactform");
-frmvalidator.addValidation("name","req","Please provide your name");
-frmvalidator.addValidation("email","req","Please provide your email");
-frmvalidator.addValidation("email","email","Please enter a valid email address");
+var frmvalidator = new Validator(".contactform");
+frmvalidator.addValidation("name", "req", "Please provide your name");
+frmvalidator.addValidation("email", "req", "Please provide your email");
+frmvalidator.addValidation("email", "email", "Please enter a valid email address");
 
 
-$('form').submit(function(e){
+$('form').submit(function (e) {
     e.preventDefault();
 
     // do ajax now
-    console.log("submitted"); 
+    console.log("submitted");
 });
