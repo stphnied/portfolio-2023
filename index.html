@@ -73,18 +73,7 @@
                         <a href="assets/img/StephanieDang_CV.pdf" download>Download CV</a>
                     </h2>
                 </div>
-                <div class="tk-blob work-blob" style="--time: 30s; --amount: 5; --fill: #56cbb9;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 747.2 726.7">
-                        <linearGradient id="my-cool-gradient" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#0eacf6" />
-                            <stop offset="40%" stop-color="#8b4ec5" />
-                            <stop offset="100%" stop-color="#fd60c0" />
-                        </linearGradient>
-                        <path
-                            d="M539.8 137.6c98.3 69 183.5 124 203 198.4 19.3 74.4-27.1 168.2-93.8 245-66.8 76.8-153.8 136.6-254.2 144.9-100.6 8.2-214.7-35.1-292.7-122.5S-18.1 384.1 7.4 259.8C33 135.6 126.3 19 228.5 2.2c102.1-16.8 213.2 66.3 311.3 135.4z">
-                        </path>
-                    </svg>
-                </div>
+                
             </div>
             <div class="column right-side">
                 <div class="content">
@@ -199,15 +188,14 @@
         <section class="workF-section s-h">
             <div class="column left-side">
                 <div class="back-Btn">
-                    <a href="">BACK</a>
+                    <a href=""><i class="fa-solid fa-arrow-left"></i> </a>
                 </div>
                 <div class="title">
                     <h1>Music Posters</h1>
-                    <h2 class="hr-line">Posters, 2022</h2>
-                    <p>Compilation of music themed posters made in order to promote local events and podcast.</p> <br>
+                    <h2 class="hr-line">Digital Posters, 2022</h2>
+                    <p>Compilation of digital music themed posters made in order to promote local events and podcast.</p> <br>
                         <p>Made with Adobe Illustrator.</p>
                 </div>
-
             </div>
             <div class="column right-side">
                 <div class="content slideshow-container">
@@ -220,9 +208,9 @@
                         <img src="assets/img/poster_05.png" alt="">
                     </div>
                     <div class="dot-indicator">
-                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <!-- <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span> -->
                     </div>
                 </div>
             </div>
@@ -242,7 +230,8 @@
             <div class="column right-side">
                 <div class="content">
                     <h2>Let's work together!</h2>
-                    <form method="post" action="php/contact.php">
+                    <form method="post" >
+                        <!-- action="php/contact.php" -->
                         <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" required/>
                         <input name="email" type="email" class="feedback-input" placeholder="Email" id="email" required/>
                         <textarea name="message" class="feedback-input" placeholder="Message" id="message" required></textarea>
@@ -254,16 +243,28 @@
     </div>
     <!-- background -->
     <div class="bg-wrap">
+        <div  id="glass" class="glass-blob glass-blob-work"></div>
         <div class="gradient"></div>
-        <div class="tk-blob work-blob2 about-blob" style="--fill: #93807d;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418.7 325.5">
+        <div class="tk-blob about-title-blob" >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412.3 354.7">
+                <path d="M320.8 58.4c47.1 38.8 97.8 95 90.8 143s-71.7 87.7-138.3 117.2c-66.5 29.5-134.7 48.7-186.4 26.5C35.3 322.9.3 259.3 0 203.3-.3 147.4 34.1 99.2 71 62.8 107.9 26.3 147.2 1.7 188.7.1c41.4-1.7 84.9 19.6 132.1 58.3z"></path>
+                <linearGradient id="my-cool-gradient" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#0eacf6" />
+                  <stop offset="40%" stop-color="#8b4ec5" />
+                  <stop offset="90%" stop-color="#fd60c0" />
+              </linearGradient>
+              </svg>
+        
+        </div>
+        <div class="tk-blob work-title-blob" style="--time: 30s; --amount: 5; --fill: #56cbb9;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 747.2 726.7">
                 <linearGradient id="my-cool-gradient2" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#fd60c0" />
+                    <stop offset="0%" stop-color="#0eacf6" />
                     <stop offset="40%" stop-color="#8b4ec5" />
-                    <stop offset="90%" stop-color="#0eacf6" />
+                    <stop offset="100%" stop-color="#fd60c0" />
                 </linearGradient>
                 <path
-                    d="M363.8 52.4c42.8 41.3 68 108.8 47.9 153.5-20.1 44.8-85.6 66.7-143 87.4-57.4 20.8-106.8 40.3-156.7 28.7C62 310.4 11.5 267.7 1.8 217.7c-9.7-49.9 21.5-107 61.5-147.6C103.2 29.5 152 5.3 206.4.8c54.5-4.6 114.7 10.4 157.4 51.6z">
+                    d="M539.8 137.6c98.3 69 183.5 124 203 198.4 19.3 74.4-27.1 168.2-93.8 245-66.8 76.8-153.8 136.6-254.2 144.9-100.6 8.2-214.7-35.1-292.7-122.5S-18.1 384.1 7.4 259.8C33 135.6 126.3 19 228.5 2.2c102.1-16.8 213.2 66.3 311.3 135.4z">
                 </path>
             </svg>
         </div>

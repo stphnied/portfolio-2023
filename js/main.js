@@ -4,19 +4,53 @@
 $(".menu ul li a").click(function () {
     $(".s-h").css("display", "none");
     $($(this).data("target")).css("display", "flex");
+    $("body").addClass("movingDots");
+    
 
     // If its about section
     if ($(this).data("target") == ".about-section") {
         $(".gradient").css("display", "none");
+
+        $(".about-title-blob").css("display","block");
+        $(".work-title-blob").css("display","none");
+
+        $(".glass").addClass("glass-blob");
+        $(".glass").removeClass("glass-blob-work");
+    }
+    else if ($(this).data("target") == ".work-section"){
+        $(".about-title-blob").css("display","none");
+        $(".work-title-blob").css("display","block");
+        $(".glass").removeClass("glass-blob");
+        $(".glass").addClass("glass-blob-work");
     }
     // if its home-section
     else if ($(this).data("target") == ".home-section") {
+
         $(".gradient").removeClass("animate-bg");
-    } else {
+
+        $("body").removeClass("movingDots");
+        $("body").css("backgroundImage","none");
+
+        $("#glass").css("display","none");
+
+    }
+    
+    else {
         $(".gradient").css("display", "flex");
         $(".gradient").addClass("animate-bg");
+
+        $(".about-title-blob").css("display","none");
+        $(".about-title-blob").css("display","none");
+
+
+
     }
 });
+
+
+if($(".workF-focused").is(":visible")){
+    // $("body").css("background","pink")
+}
 
 
 // COPY TO CLIPBOARD

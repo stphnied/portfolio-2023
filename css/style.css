@@ -10,15 +10,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: #000000; */
     background-color: #120e16;
     color: white;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
     overflow-y: hidden;
     /* bg */
-    background-image: radial-gradient(rgba(255, 255, 255, 0.137) 1px, transparent 0);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.137) 1.5px, transparent 0);
     background-size: 40px 40px;
     background-position: -19px -19px;
+
+}
+
+.movingDots {
+    background-color: #120e16;
+    animation: animatedBackground 15s  infinite;
 }
 
 /* TEXTS ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -38,7 +45,6 @@ h1 {
 }
 
 h2 {
-    /* font-size: 1.25rem; */
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
 }
@@ -67,7 +73,6 @@ nav {
     width: 85vw;
     display: flex;
     overflow: hidden;
-    /* background-color: rgba(128, 0, 128, 0.253); */
     position: fixed;
     bottom: 0;
     padding: 1rem;
@@ -121,7 +126,6 @@ nav {
 .menu ul {
     display: flex;
     flex-direction: row;
-    /* transform: translateX(2.05vw); */
 }
 
 .menu ul li {
@@ -211,14 +215,9 @@ a:focus::before {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    background: radial-gradient(transparent, black),;
 }
 
-.scroll-wrap>* {
-    /* width: 250px; */
-    /* height: auto;
-    flex: 0 0 auto;
-    background-color: blue; */
-}
 
 section {
     display: flex;
@@ -243,10 +242,8 @@ section .right-side {
     flex: 60%;
 }
 
-section .title,
-.content {
-    /* margin-top: 10rem; */
-}
+
+
 
 /* .home-section, */
 .about-section,
@@ -277,11 +274,6 @@ section .title,
 }
 
 #myVideo {
-    /* position: fixed;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0.5; */
     opacity: 0.8;
     object-fit: cover;
     width: 100vw;
@@ -383,7 +375,7 @@ span {
 
 /* RIGHT SIDE */
 .work-section .right-side {
-    /* padding-top: 10rem; */
+    padding-top: 5rem;
 }
 
 .work-container::-webkit-scrollbar {
@@ -397,7 +389,7 @@ span {
     --mask-height: 32px;
 
     /* Our height limit */
-    height: 80vh;
+    height: 85vh;
 
     /* Need to make sure container has bottom space,
  otherwise content at the bottom is always faded out */
@@ -499,6 +491,10 @@ span {
 .workF-section {
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.301);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /* backdrop-filter: blur( 4px ); */
+    /* -webkit-backdrop-filter: blur( 4px ); */
 }
 
 
@@ -508,11 +504,13 @@ span {
 
 .workF-section .back-Btn {
     position: absolute;
-    top: 10%;
+    top: 5%;
     align-self: baseline;
-    -ms-transform: rotate(-90deg);
+    border: 2px solid #18d2d2;
+    padding: 10px 35px;
+    /* -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    margin-left: -2.5rem;
+    margin-left: -2.5rem; */
 
 }
 
@@ -568,6 +566,7 @@ span {
     animation-name: fade;
     animation-duration: 1s;
 }
+
 
 
 
