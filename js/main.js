@@ -48,10 +48,7 @@ $(".menu ul li a").click(function () {
 });
 
 
-if($(".workF-focused").is(":visible")){
-    // $("body").css("background","pink")
-}
-
+$("nav").css("display","none");
 
 // COPY TO CLIPBOARD
 let emailCopy = document.getElementsByClassName("fa-envelope");
