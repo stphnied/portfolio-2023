@@ -65,9 +65,6 @@ function copyClipboard() {
     navigator.clipboard.writeText(copyText);
 }
 
-
-
-
 $(".logo img").hover(
     function () {
         $(".logo p").css("opacity", "1")
@@ -89,4 +86,11 @@ $('form').submit(function (e) {
 
     // do ajax now
     console.log("submitted");
+});
+
+
+// Back button
+$(".back-Btn a").click(function(){
+    $("#work").css("display","flex");
+    $("#home").css("display","flex");
 });

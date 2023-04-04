@@ -18,14 +18,6 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-
-// Back button
-$(".back-Btn a").click(function(){
-
-
-});
-
-
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("slide");
