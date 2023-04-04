@@ -32,16 +32,16 @@
     <!-- navigation -->
     <nav>
         <div class="logo">
-            <a href="#">
+            <a href="#home">
                 <img src="assets/img/SD_logo.png " data-target=".home-section" href="#home">
             </a>
             <p>Stéphanie Dang</p></a>
         </div>
         <div class="menu">
             <ul>
-                <li><a href="#about" data-target=".about-section">About</a></li>
-                <li><a href="#work" data-target=".work-section">Work</a></li>
-                <li><a href="#contact" data-target=".contact-section">Contact</a></li>
+                <li><a href="#about" data-target="#about">About</a></li>
+                <li><a href="#work" data-target="#work">Work</a></li>
+                <li><a href="#contact" data-target="#contact">Contact</a></li>
             </ul>
         </div>
 
@@ -59,14 +59,14 @@
     <!-- sections -->
     <div class="scroll-wrap">
         <!-- HOMEPAGE -->
-        <section class="home-section s-h">
+        <section id="home" class="home-section s-h">
             <video autoplay muted loop id="myVideo">
                 <source src="assets/vid/Dang_Promo.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </section>
         <!-- ABOUT -->
-        <section class="about-section s-h">
+        <section id="about" class="about-section s-h">
             <div class="column left-side">
 
                 <div class="title">
@@ -96,7 +96,7 @@
             </div>
         </section>
         <!-- WORK -->
-        <section class="work-section s-h">
+        <section id="work" class="work-section s-h">
             <div class="column left-side">
                 <!-- Blobs -->
                 <!-- <div class="tk-blob work-blob" style="--time: 30s; --amount: 5; --fill: #56cbb9;">
@@ -136,7 +136,7 @@
                         <!-- Music Theme Posters -->
                         <div class="image-work" data-tags="Poster">
                             <div class="title-work">
-                                <h2 class="work-title">Music Theme Posters</h2>
+                                <h2 class="work-title"><a href="work-pages/posters/music-poster.html">Music Theme Posters</a></h2>
                             </div>
                             <img src="assets/img/poster_01.png" alt="">
                         </div>
@@ -187,7 +187,7 @@
             </div>
         </section>
         <!-- CONTACT -->
-        <section class="contact-section s-h">
+        <section id="contact" class="contact-section s-h">
             <div class="column left-side">
                 <div class="title">
                     <h1>Contact.</h1>
@@ -216,8 +216,9 @@
     </div>
     <!-- background -->
     <div class="bg-wrap">
-        <div id="glass" class="glass-blob glass-blob-work"></div>
+        <div id="glass" class=""></div>
         <div class="gradient"></div>
+        <div class="contact-blob"></div>
         <div class="tk-blob about-title-blob">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412.3 354.7">
                 <path

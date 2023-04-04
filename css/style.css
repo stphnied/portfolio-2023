@@ -16,16 +16,19 @@ body {
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
     overflow-y: hidden;
-    /* bg */
     background-image: radial-gradient(rgba(255, 255, 255, 0.137) 1.5px, transparent 0);
     background-size: 40px 40px;
     background-position: -19px -19px;
-
 }
 
 .movingDots {
-    background-color: #120e16;
-    animation: animatedBackground 15s  infinite;
+    /* background-color: #120e16; */
+    /* background-blend-mode: overlay, screen, screen;
+    background-repeat: repeat;
+    background-position: center center; */
+    /* background-image: url(https://grainy-gradients.vercel.app/noise.svg),radial-gradient(rgba(255, 255, 255, 0.137) 1.5px, transparent 0); */
+    /* bg */
+    animation: animatedBackground 60s infinite;
 }
 
 /* TEXTS ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -242,12 +245,11 @@ section .right-side {
     flex: 60%;
 }
 
-.home-section,
+/* .home-section, */
 .about-section,
-.contact-section,
+.contact-section
+,
 .work-section
-/* , */
-/* .workF-section */
     {
     display: none;
 }
@@ -433,7 +435,7 @@ span {
 }
 
 .gallery div img:hover {
-    opacity: 0.2;
+    /* opacity: 0.5; */
     /* filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg); */
     transition: none;
     background-color: black;
@@ -527,11 +529,12 @@ span {
 
 .workF-section p {
     margin: 0 1rem;
+    font-size: 1rem;
 }
 
 .slideshow-container {
     position: relative;
-    margin: 3rem 0 1rem 0;
+    /* margin: 3rem 0 1rem 0; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -552,9 +555,9 @@ span {
 }
 
 .workF-section .slide img {
-    /* width: 100%; */
+    width: 100%;
     /* max-height: 1000px; */
-    max-height: 850px;
+    max-height: 800px;
 }
 
 .dot-indicator {

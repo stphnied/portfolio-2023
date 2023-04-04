@@ -6,13 +6,6 @@ $("#glass").css("display","none");
 $("body").css("backgroundColor","#060606");
 $(".bg-wrap").css("display","none");
 
-
-// Back button
-$(".back-Btn a").click(function(){
-    window.history.back();
-
-});
-
 // Slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -24,6 +17,14 @@ function plusSlides(n) {
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
+
+
+// Back button
+$(".back-Btn a").click(function(){
+
+
+});
+
 
 function showSlides(n) {
     let i;

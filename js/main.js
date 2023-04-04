@@ -4,17 +4,16 @@
 $(".menu ul li a").click(function () {
     $(".s-h").css("display", "none");
     $($(this).data("target")).css("display", "flex");
-    $("body").addClass("movingDots");
+    $(".bg-wrap").css("display","flex");
 
     // If its about section
     if ($(this).data("target") == ".about-section") {
         $(".gradient").css("display", "none");
-
         $(".about-title-blob").css("display","block");
         $(".work-title-blob").css("display","none");
-
         $(".glass").addClass("glass-blob");
         $(".glass").removeClass("glass-blob-work");
+        $(".contact-blob").css("display", "none");
     }
 
     // work page
@@ -23,28 +22,37 @@ $(".menu ul li a").click(function () {
         $(".work-title-blob").css("display","block");
         $(".glass").removeClass("glass-blob");
         $(".glass").addClass("glass-blob-work");
-    }
-    // if its home-section
-    else if ($(this).data("target") == ".home-section") {
-
-        $(".gradient").removeClass("animate-bg");
-
-        $("body").removeClass("movingDots");
-        $("body").css("backgroundImage","none");
-
-        $("#glass").css("display","none");
-
-    }
-    
-    else {
         $(".gradient").css("display", "flex");
-        $(".gradient").addClass("animate-bg");
+        $(".contact-blob").css("display", "none");
+    }
 
-        $(".about-title-blob").css("display","none");
-        $(".about-title-blob").css("display","none");
+    else if($(this).data("target") == ".contact-section") {
+        $(".gradient").css("display", "none");
+        $(".contact-blob").css("display", "flex");
 
     }
+
+    $("body").addClass("movingDots");
+    $(".gradient").addClass("animate-bg");
+    
 });
+
+
+// homepage btn Refresh vid
+$(".logo img").click(function () {
+    $(".s-h").css("display", "none");
+    $($(this).data("target")).css("display", "flex");
+    $('#myVideo').get(0).pause();
+    $("#myVideo").get(0).load();
+    $('#myVideo').get(0).play();
+
+    $(".bg-wrap").css("display","none");
+    $("body").removeClass("movingDots");
+    $(".glass-blob-work").css("display","none");
+    $(".glass-blob").css("display","none");
+})
+
+
 
 // COPY TO CLIPBOARD
 let emailCopy = document.getElementsByClassName("fa-envelope");
@@ -57,14 +65,7 @@ function copyClipboard() {
     navigator.clipboard.writeText(copyText);
 }
 
-// homepage btn Refresh vid
-$(".logo img").click(function () {
-    $(".s-h").css("display", "none");
-    $($(this).data("target")).css("display", "flex");
-    $('#myVideo').get(0).pause();
-    $("#myVideo").get(0).load();
-    $('#myVideo').get(0).play();
-})
+
 
 
 $(".logo img").hover(
