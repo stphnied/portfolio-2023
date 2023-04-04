@@ -1,16 +1,19 @@
 'use strict';
 
+// Hide other displays
 $("nav").css("display","none");
 $("#glass").css("display","none");
 $("body").css("backgroundColor","#060606");
 $(".bg-wrap").css("display","none");
 
 
-$(".back-Btn").click(function(){
-    window.location.href='/index.html#work';
+// Back button
+$(".back-Btn a").click(function(){
+    window.history.back();
+
 });
 
-// Work Focused: Slideshow
+// Slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
 
