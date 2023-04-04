@@ -5,7 +5,6 @@ $(".menu ul li a").click(function () {
     $(".s-h").css("display", "none");
     $($(this).data("target")).css("display", "flex");
     $("body").addClass("movingDots");
-    
 
     // If its about section
     if ($(this).data("target") == ".about-section") {
@@ -17,6 +16,8 @@ $(".menu ul li a").click(function () {
         $(".glass").addClass("glass-blob");
         $(".glass").removeClass("glass-blob-work");
     }
+
+    // work page
     else if ($(this).data("target") == ".work-section"){
         $(".about-title-blob").css("display","none");
         $(".work-title-blob").css("display","block");
@@ -42,13 +43,8 @@ $(".menu ul li a").click(function () {
         $(".about-title-blob").css("display","none");
         $(".about-title-blob").css("display","none");
 
-
-
     }
 });
-
-
-$("nav").css("display","none");
 
 // COPY TO CLIPBOARD
 let emailCopy = document.getElementsByClassName("fa-envelope");
@@ -79,39 +75,6 @@ $(".logo img").hover(
         $(".logo p").css("opacity", "0")
     }
 )
-
-// Work Focused: Slideshow
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "flex";
-    dots[slideIndex - 1].className += " active";
-}
-
 
 // Contact form
 var frmvalidator = new Validator(".contactform");
