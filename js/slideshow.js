@@ -1,13 +1,8 @@
 'use strict';
 
-// Hide other displays
-$("nav").css("display","none");
-$("#glass").css("display","none");
-$("body").css("backgroundColor","#060606");
-$(".bg-wrap").css("display","none");
-
 // Slideshow
-let slideIndex = 1;
+var slideIndex = 1;
+
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -37,3 +32,11 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].className += " active";
 }
+
+$(".back-Btn a").on("click", function(){
+    $("#workF >").remove();
+    $("#workF").css("display","none");
+    $(".work-section").css("display","flex");
+    console.log("clicked");
+});
+

@@ -28,7 +28,7 @@ body {
     background-position: center center; */
     /* background-image: url(https://grainy-gradients.vercel.app/noise.svg),radial-gradient(rgba(255, 255, 255, 0.137) 1.5px, transparent 0); */
     /* bg */
-    animation: animatedBackground 60s infinite;
+    animation: animatedBackground 5s infinite linear;
 }
 
 /* TEXTS ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -247,9 +247,9 @@ section .right-side {
 
 /* .home-section, */
 .about-section,
-.contact-section
-,
-.work-section
+.contact-section,
+.work-section,
+.workF-section
     {
     display: none;
 }

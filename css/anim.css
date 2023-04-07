@@ -89,7 +89,7 @@
 
 @keyframes animatedBackground {
   from {
-    background-position: 0 -500%;
+    background-position: 0 0%;
   }
   to {
     background-position: 0 100%;
