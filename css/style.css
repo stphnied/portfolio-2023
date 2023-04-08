@@ -707,12 +707,11 @@ textarea {
     font-size: 1rem;
 }
 
-
-
+/* For smaller screen  */
 @media (max-width: 960px) {
 
     .scroll-wrap {
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
 
     #myVideo {
@@ -747,6 +746,10 @@ textarea {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    #about {
+        overflow-y: scroll;
     }
 
     #about .content p {
@@ -820,6 +823,29 @@ textarea {
     .workF-section h1 {
         width: 50%;
     }
+
+    .title-work {
+
+        visibility: visible;
+        opacity: 1;
+        background-color:#00000000;
+        justify-content: end;
+        align-items: self-end;
+        text-align: end;
+    }
+
+
+    .title-work h1, .title-work h2 {
+        width: 50%;
+        background-color: #00000063;
+    }
+    
+
+    .title-work h1:last-child {
+        display: none;
+    }
+
+
     
 }
 
