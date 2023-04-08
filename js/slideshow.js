@@ -40,7 +40,7 @@ $(".back-Btn a").on("click", function(){
     
     $("nav").css("display","flex");
     $("#glass").css("display","flex");
-    $("body").css("backgroundColor","#120e16");
+    $("body").css("backgroundColor","#0e0a14");
     $(".bg-wrap").css("display","flex");
 });
 

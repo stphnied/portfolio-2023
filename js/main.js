@@ -127,14 +127,50 @@ $(".image-work").on("click",function(){
     $("#workF").css("display","flex");
     
     switch(this.id) {
+        // Showreel 23
+        case "showreel-23":
+            $("#workF").load("work-pages/motions.html .showreel-23 .column");
+            $.getScript("js/slideshow.js");  
+        break;
         // MUSIC POSTER
         case "music-poster": 
-        $("#workF").load("work-pages/posters.html .musicPosters .column"); 
-        $.getScript("js/slideshow.js");
+            $("#workF").load("work-pages/posters.html .musicPosters .column"); 
+            $.getScript("js/slideshow.js");
         break;
+        // GFN
         case "gfnProd": 
-        $("#workF").load("work-pages/posters.html .gfnProd .column"); 
-        $.getScript("js/slideshow.js");
+            $("#workF").load("work-pages/posters.html .gfnProd .column"); 
+            $.getScript("js/slideshow.js");
+        break;
+        // BetterSleep
+        case "betterSleep":
+            $("#workF").load("work-pages/motions.html .betterSleep .column");
+            $.getScript("js/slideshow.js");  
+        break;
+        // BetterSleep  Graphics
+        case "betterSleep-graph":
+            $("#workF").load("work-pages/posters.html .bs-graphic .column");
+            $.getScript("js/slideshow.js");  
+        break;
+        // Joji
+        case "joji":
+            $("#workF").load("work-pages/posters.html .joji .column");
+            $.getScript("js/slideshow.js");  
+        break;
+        // Chili
+        case "chili":
+            $("#workF").load("work-pages/posters.html .chili .column");
+            $.getScript("js/slideshow.js");  
+        break;
+        // Enviro
+        case "enviro":
+            $("#workF").load("work-pages/posters.html .enviro .column");
+            $.getScript("js/slideshow.js");  
+        break;
+        // Showreel 20
+        case "showreel-20":
+            $("#workF").load("work-pages/motions.html .showreel-20 .column");
+            $.getScript("js/slideshow.js");  
         break;
     }
 

@@ -1,0 +1,167 @@
+Class('UiJsonMap')({
+    findTag : function findTag (tag, elements) {
+        var results = [ ];
+
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i] && elements[i].tag === tag) {
+                results.push(elements[i]);
+            }
+        }
+
+        return results;
+    },
+
+    inputMap : function inputMap (source, target) {
+        var sourceTags, targetTags, text, graphic, customGraphic;
+
+        // text inputs
+        sourceTags = source.text.filter(function (text) {
+            return text.tag;
+        }).length;
+
+        targetTags = target.text.filter(function (text) {
+            return text.tag;
+        }).length;
+
+        source.text.forEach(function (text, index) {
+            var elements = [ ];
+
+            if (sourceTags === 0 || targetTags === 0) {
+                elements = [ target.text[index] ];
+            } else if (text.tag) {
+                elements = UiJsonMap.findTag(text.tag, target.text);
+            }
+
+            elements.forEach(function (element) {
+                if (element) {
+                    element.color    = text.color || element.color;
+                    element.contents = text.contents || element.contents;
+                    element.visible  = text.visible;
+
+                    if (element.contents.trim().length === 0) {
+                        // If there is no content, shouldn't be visible
+                        element.visible = false;
+                    }
+                }
+            });
+        });
+
+        sourceTags = source.customGraphic.filter(function (graphic) {
+            return graphic.tag;
+        }).length;
+
+        targetTags = target.customGraphic.filter(function (graphic) {
+            return graphic.tag;
+        }).length;
+
+        // custom graphic inputs
+        source.customGraphic.forEach(function (graphic, index) {
+            var elements = [ ];
+
+            if (sourceTags === 0 || targetTags === 0) {
+                elements = [ target.customGraphic[index] ];
+            } else if (graphic.tag) {
+                elements = UiJsonMap.findTag(graphic.tag, target.customGraphic);
+            }
+
+            elements.forEach(function (element) {
+                if (element && graphic.hash) {
+                    element.hash = graphic.hash;
+                    element.layers[0].image = graphic.layers[0].image;
+                }
+            });
+        });
+
+        sourceTags = source.graphic.filter(function (graphic) {
+            return graphic.tag;
+        }).length;
+
+        targetTags = target.graphic.filter(function (graphic) {
+            return graphic.tag;
+        }).length;
+
+        source.graphic.forEach(function (graphic, index) {
+            var elements = [ ],
+                getVisibleLayers;
+
+            getVisibleLayers = function getVisibleLayers(item) {
+                if (!item.layers) {
+                    return null;
+                }
+
+                return item.layers.filter(function (layer) {
+                    return layer.visible;
+                });
+            };
+
+            if ((sourceTags === 0 || targetTags === 0) && typeof target.graphic[index] !== 'undefined') {
+                elements = [ target.graphic[index] ];
+            } else if (graphic.tag) {
+                elements = UiJsonMap.findTag(graphic.tag, target.graphic);
+            }
+
+            elements.forEach(function (element) {
+                var visibleLayers;
+                if (graphic.layer && graphic.layers) {
+                    element.layer = graphic.layer;
+                    visibleLayers = getVisibleLayers(graphic);
+                    element.layers = JSON.parse(JSON.stringify(visibleLayers));
+                }
+
+                element.color = graphic.color || element.color;
+            });
+        });
+
+        // background color input
+        if (source.backgroundColor && target.backgroundColor) {
+            var elements = [ ];
+
+            if (!source.backgroundColor.tag || !target.backgroundColor.tag) {
+                elements = [ target.backgroundColor ];
+            } else if (source.backgroundColor.tag) {
+                elements = UiJsonMap.findTag(source.backgroundColor.tag, [ target.backgroundColor ]);
+            }
+
+            elements.forEach(function (element) {
+                if (element) {
+                    element.color = source.backgroundColor.color;
+                }
+            });
+        }
+
+        return target;
+    },
+
+    outputMap : function outputMap (source, target) {
+        var image, hash, color;
+
+        image = source.previewImage.value;
+        hash  = source.previewImage.hash;
+        color = source.backgroundColor && source.backgroundColor.color;
+
+        target.customGraphic.forEach(function (graphic) {
+            if (graphic.outputReceiver) {
+                graphic.hash = hash;
+                graphic.layers[0].image = image;
+            }
+        });
+
+        target.graphic.forEach(function (graphic) {
+            if (color && graphic.outputReceiver) {
+                graphic.color = color;
+            }
+        });
+
+        return target;
+    },
+
+    map: function map (strategy, source, target) {
+        if (strategy === 'input') {
+            return UiJsonMap.inputMap(source, target);
+        }
+
+        if (strategy === 'output') {
+            return UiJsonMap.outputMap(source, target);
+        }
+    }
+});
