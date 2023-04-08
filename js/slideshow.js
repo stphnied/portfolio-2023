@@ -37,6 +37,10 @@ $(".back-Btn a").on("click", function(){
     $("#workF >").remove();
     $("#workF").css("display","none");
     $(".work-section").css("display","flex");
-    console.log("clicked");
+    
+    $("nav").css("display","flex");
+    $("#glass").css("display","flex");
+    $("body").css("backgroundColor","#120e16");
+    $(".bg-wrap").css("display","flex");
 });
 

@@ -56,6 +56,19 @@
     /* opacity: 0.7; */
 }
 
+
+.contact-title-blob {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  width: 400px;
+  z-index: -2;
+  filter: blur(2rem);
+  fill: url(#my-cool-gradient3) #18d2d2;;
+  --amount: 5;
+  --time: 40s;
+}
+
 .contact-blob {
   position: absolute;
   right: 27%;
@@ -123,6 +136,25 @@
 }
 
   .glass-blob-work {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    /* background-image: linear-gradient(#0eacf6, #c0649d); */
+    width: 380px;
+    height: 380px;
+    /* box-shadow: 0px 0px 30px #187ed2be; */
+    animation:  slide-up 0.5s ease-out,blob 10s linear alternate infinite, spin 20s alternate infinite;
+
+    background: rgba(255, 255, 255, 0.082);
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+
+
+  .glass-blob-contact {
     position: absolute;
     left: 10%;
     top: 25%;

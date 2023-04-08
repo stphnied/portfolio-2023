@@ -19,7 +19,7 @@
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/blobz.min.css">
+    <link rel="stylesheet" href="css/blobz.min.css">
     <link rel="stylesheet" href="css/blobs.css">
     <link rel="stylesheet" href="css/anim.css">
     <link rel="stylesheet" href="css/style.css">
@@ -60,6 +60,9 @@
     <div class="scroll-wrap">
         <!-- HOMEPAGE -->
         <section id="home" class="home-section s-h">
+            <a id="mute-Btn" class="muted">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <i class="fa-solid fa-volume-high" style="display: none"></i></a>
             <video autoplay muted loop id="myVideo">
                 <source src="assets/vid/Dang_Promo.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -114,58 +117,75 @@
                         <!-- NEWEST -->
                         <div class="image-work" data-tags="Motion,Poster" id="">
                             <div class="title-work">
-                                <h2 class="work-title">NEWEST</h2>
+                                <h1>Newest</h1>
+                                <h2 class="work-title">2023</h2>
+                                <h1><i class="fa-regular fa-square-plus"></i></h1>
                             </div>
                             <img src="assets/img/motion_01.png">
                         </div>
-                        <!-- Music Theme Posters -->
-                        <div class="image-work" data-tags="Poster" id="music-poster">
-                            <div class="title-work">
-                                <h2 class="work-title" >Music Theme Posters</a></h2>
-                            </div>
-                            <img src="assets/img/poster_01.png" alt="">
-                        </div>
-                        <!-- Environmental Poster -->
-                        <div class="image-work" data-tags="Poster">
-                            <div class="title-work">
-                                <h2 class="work-title">Podcast Poster</h2>
-                            </div>
-                            <img src="assets/img/poster_02.png" alt="">
-                        </div>
+                        
                         <!-- BetterSleep -->
                         <div class="image-work" data-tags="Poster,Motion">
                             <div class="title-work">
-                                <h2 class="work-title">BetterSleep</h2>
+                                <h1>BetterSleep Ads</h1>
+                                <h2 class="work-title">2022</h2>
+                                <h1><i class="fa-regular fa-square-plus"></i></h1>
                             </div>
                             <img src="assets/img/motion_01.png">
                         </div>
                         <!-- BetterSleep TikTok-->
                         <div class="image-work" data-tags="Motion">
                             <div class="title-work">
+                                <h1>BetterSleep TikTok</h1>
                                 <h2 class="work-title">TikTok</h2>
+                                <h1><i class="fa-regular fa-square-plus"></i></h1>
                             </div>
                             <img src="assets/img/motion_01.png">
+                        </div>
+                        <!-- Music Theme Posters -->
+                        <div class="image-work" data-tags="Poster" id="music-poster">
+                            <div class="title-work">
+                                <h1>Music Theme Posters</h1>
+                                <h2 class="work-title" >2021</a></h2>
+                                <h1><i class="fa-regular fa-square-plus"></i></h1>
+                            </div>
+                            <img src="assets/img/poster_01.png" alt="">
+                        </div>
+                        <!-- Environmental Poster -->
+                        <div class="image-work" data-tags="Poster">
+                            <div class="title-work">
+                                <h1>Fan Merchandise</h1>
+                                <h2 class="work-title">2021</h2>
+                                <h1><i class="fa-regular fa-square-plus"></i></h1>
+                            </div>
+                            <img src="assets/img/poster_05.png" alt="">
                         </div>
                         <!-- Chez Chili -->
                         <div class="image-work" data-tags="Poster,Other">
                             <div class="title-work">
-                                <h2 class="work-title">Chez Chili</h2>
+                                <h1>Chez Chili</h1>
+                                <h2 class="work-title">2021</h2>
+                                <h1><i class="fa-regular fa-square-plus"></i></h1>
                             </div>
                             <img src="assets/img/motion_01.png">
                         </div>
                         <!-- GFN Productions -->
                         <div class="image-work" data-tags="Poster" id="gfnProd">
                             <div class="title-work">
-                                <h2 class="work-title">GFN Productions</h2>
+                                <h1>GFN Productions</h1>
+                                <h2 class="work-title">2021</h2>
+                                <h1><i class="fa-regular fa-square-plus"></i></h1>
                             </div>
-                            <img src="assets/img/poster_03.png" alt="">
+                            <img src="assets/img/poster_04.png" alt="">
                         </div>
                         <!-- Gachapyon Game -->
                         <div class="image-work" data-tags="Other">
                             <div class="title-work">
-                                <h2 class="work-title">Gachapyon</h2>
+                                <h1>Environmental Poster</h1>
+                                <h2 class="work-title">2020</h2>
+                                <h1><i class="fa-regular fa-square-plus"></i></h1>
                             </div>
-                            <img src="assets/img/motion_01.png">
+                            <img src="assets/img/poster_03.png">
                         </div>
                     </div>
                 </div>
@@ -204,7 +224,9 @@
     </div>
     <!-- background -->
     <div class="bg-wrap">
-        <div id="glass" class="glass"></div>
+        <div class="glass glass-blob"></div>
+        <div class="glass glass-blob-work"></div>
+        <div class="glass glass-blob-contact"></div>
         <div class="gradient"></div>
         <div class="contact-blob"></div>
         <div class="about-blob"></div>
@@ -233,10 +255,22 @@
                 </path>
             </svg>
         </div>
+        <div class="tk-blob contact-title-blob" style="--time: 30s; --amount: 5;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 747.2 726.7">
+                <linearGradient id="my-cool-gradient3" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#0eacf6" />
+                    <stop offset="40%" stop-color="#8b4ec5" />
+                    <stop offset="100%" stop-color="#fd60c0" />
+                </linearGradient>
+                <path
+                    d="M539.8 137.6c98.3 69 183.5 124 203 198.4 19.3 74.4-27.1 168.2-93.8 245-66.8 76.8-153.8 136.6-254.2 144.9-100.6 8.2-214.7-35.1-292.7-122.5S-18.1 384.1 7.4 259.8C33 135.6 126.3 19 228.5 2.2c102.1-16.8 213.2 66.3 311.3 135.4z">
+                </path>
+            </svg>
+        </div>
     </div>
     <!-- Scipts -->
     <script src="https://kit.fontawesome.com/aafc01b359.js" crossorigin="anonymous"></script>
-    <script src="assets/filter-tags.js"></script>
+    <script src="js/filter-tags.js"></script>
     <script src="js/main.js"></script>
 </body>
 
