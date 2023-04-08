@@ -117,6 +117,20 @@ $("#mute-Btn").on("click",function(){
     $("#myVideo").prop("muted", !$("#myVideo").prop("muted"));
 });
 
+
+// See work btn
+$(".about-wLink").on("click",function(){
+    $("#about").css("display","none");
+    $("#work").css("display","flex");
+    $(".glass-blob").css("display","none");
+    $(".glass-blob-contact").css("display","none");
+
+    $(".glass-blob-work").css("display","block");
+    $(".about-blob").css("display", "flex");
+    $(".work-title-blob").css("display","block");
+    $(".gradient").css("display", "flex");
+})
+
 // Work focused
 $(".image-work").on("click",function(){
     $("#work").css("display","none");
